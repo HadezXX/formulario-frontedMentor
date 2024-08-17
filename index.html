@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Frontend Mentor | Multi-step form" />
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon-32x32.png" />
+   
+    <link rel="stylesheet" href="estilos.css" />
+    <script defer src="javascrip.js"></script>
+
+    <title>Formulario Adaptable</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="step__container">
+        <div class="sidebar">
+          <div class="step__indecater">
+            <div class="indecater__num">1</div>
+            <div class="indecater__text">
+              <p class="subtitle">PASO1</p>
+              <p class="mini__title">Tu Informacion</p>
+            </div>
+          </div>
+          <div class="step__indecater">
+            <div class="indecater__num 2">2</div>
+            <div class="indecater__text">
+              <p class="subtitle">PASO2</p>
+              <p class="mini__title">Selecionar Plan</p>
+            </div>
+          </div>
+          <div class="step__indecater">
+            <div class="indecater__num 3">3</div>
+            <div class="indecater__text">
+              <p class="subtitle">PASO3</p>
+              <p class="mini__title">Membresia</p>
+            </div>
+          </div>
+          <div class="step__indecater">
+            <div class="indecater__num 4">4</div>
+            <div class="indecater__text">
+              <p class="subtitle">PASO4</p>
+              <p class="mini__title">Resumen</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="steps__container">
+          
+          <form class="step" id="form">
+            <h3 class="main__title">Informacion Personal</h3>
+            <p class="description">
+              Proporcione su nombre, dirección de correo electrónico y número de teléfono.
+            </p>
+            <ul class="list">
+              <li class="list__item">
+                <div class="input__labe">
+                  <p class="label">Nombre</p>
+                  <p class="warning"></p>
+                </div>
+                <input
+                  type="text"
+                  name="userName"
+                  class="input"
+                  placeholder="Stephen King"
+                  required />
+              </li>
+              <li class="list__item">
+                <div class="input__labe">
+                  <p class="label">Correo Electronico</p>
+                  <p class="warning"></p>
+                </div>
+                <input
+                  type="email"
+                  name="email"
+                  class="input"
+                  placeholder="stephenking@lorem.com"
+                  required />
+              </li>
+              <li class="list__item">
+                <div class="input__labe">
+                  <p class="label">Numero De Telefono</p>
+                  <p class="warning"></p>
+                </div>
+                <input
+                  type="number"
+                  name="phone"
+                  class="input"
+                  placeholder="+51 234 567 890"
+                  required />
+              </li>
+            </ul>
+          </form>
+         
+          <div class="step" id="step-2">
+            <h3 class="main__title">Selecionar Su Plan</h3>
+            <p class="description">
+              Facturacion Mensual o Anual.
+            </p>
+            <div class="plan__card_container" id="plan-cards">
+              <div class="plan__card card">
+                <div class="card__img">
+                  <img src="icon-arcade.svg" alt="arcade" />
+                </div>
+                <div class="plan__price">
+                  <p class="card__name" id="arcade">Arcade</p>
+                  <p class="card__price">
+                    $<span class="sbscription__price">00</span>/<span
+                      class="sbscription__duration"
+                      >xx</span
+                    >
+                  </p>
+                  <p class="yearly__benefit">2 Meses Gratis</p>
+                </div>
+              </div>
+              <div class="plan__card card">
+                <div class="card__img">
+                  <img src="icon-advanced.svg" alt="arcade" />
+                </div>
+                <div class="plan__price">
+                  <p class="card__name" id="advance">Avanzado</p>
+                  <p class="card__price">
+                    $<span class="sbscription__price">00</span>/<span
+                      class="sbscription__duration"
+                      >xx</span
+                    >
+                  </p>
+                  <p class="yearly__benefit">2 Meses Gratis</p>
+                </div>
+              </div>
+              <div class="plan__card card">
+                <div class="card__img">
+                  <img src="icon-advanced.svg" alt="arcade" />
+                </div>
+                <div class="plan__price">
+                  <p class="card__name" id="pro">Pro</p>
+                  <p class="card__price">
+                    $<span class="sbscription__price">00</span>/<span
+                      class="sbscription__duration"
+                      >xx</span
+                    >
+                  </p>
+                  <p class="yearly__benefit">2 Meses Gratis</p>
+                </div>
+              </div>
+            </div>
+            <p id="select-plan-error"></p>
+            <div class="toggle__container">
+              
+              <p class="monthly__plan selected__plan" id="monthly">Mensual</p>
+              <div class="toggle">
+                <div class="toggle__circle" id="toggle"></div>
+              </div>
+              <p class="yearly__plan" id="yearly">Anual</p>
+            </div>
+          </div>
+          
+          <div class="step" id="step-3">
+            <h3 class="main__title">Seleccione Membresia</h3>
+            <p class="description">
+              Los complementos ayudan a mejorar tu experiencia de juego.
+            </p>
+            <div class="addson__card_container">
+              <div class="addon__card card">
+                <input type="checkbox" name="checkbox" id="" class="checkbox" />
+                <div class="card__text">
+                  <p class="card__name">Servicio En Linea</p>
+                  <p class="card__description"></p>
+                </div>
+                <p class="card__price">
+                  +$<span class="sbscription__price">00</span>/<span
+                    class="sbscription__duration"
+                    >xx</span
+                  >
+                </p>
+              </div>
+              <div class="addon__card card">
+                <input type="checkbox" name="checkbox" id="" class="checkbox" />
+                <div class="card__text">
+                  <p class="card__name">Mayor Capacidad De Almacenamiento</p>
+                  <p class="card__description">1TB Adicional En Almacenamiento En La Nube</p>
+                </div>
+                <p class="card__price">
+                  +$<span class="sbscription__price">00</span>/<span
+                    class="sbscription__duration"
+                    >xx</span
+                  >
+                </p>
+              </div>
+              <div class="addon__card card">
+                <input type="checkbox" name="checkbox" id="" class="checkbox" />
+                <div class="card__text">
+                  <p class="card__name">Perfil Personalizable</p>
+                  <p class="card__description">Temas Personalizado En Tu Perfil</p>
+                </div>
+                <p class="card__price">
+                  +$<span class="sbscription__price">00</span>/<span
+                    class="sbscription__duration"
+                    >xx</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="step" id="step-4">
+            <h3 class="main__title">Terminando</h3>
+            <p class="description">
+              Vuelva a verificar que todo se vea bien antes de confirmar.
+            </p>
+            <div class="finishingup__card_container card">
+              <div class="selected__plan_container">
+                <div class="" id="selected-plan"></div>
+                <button class="change__plan" id="change-plan">Cambiar</button>
+              </div>
+              <ul id="selected-addon">
+              
+              </ul>
+            </div>
+            <div class="total" id="total">
+              
+            </div>
+          </div>
+          
+          <div class="step last__step" id="thank-you">
+            <div class="final__img">
+              <img src="icon-thank-you.svg" alt="" />
+            </div>
+            <h3 class="main__title">GRACIAS!</h3>
+            <p class="description">
+              ¡Gracias por confirmar tu suscripción! Esperamos que te diviertas
+              utilizando nuestra plataforma. Si alguna vez necesita ayuda, no dude en
+              envíenos un correo electrónico a support@loremgaming.com.
+            </p>
+          </div>
+         
+          <div class="button__container">
+            <button class="button prev__button" id="prev-button">
+              Regresar
+            </button>
+            <button class="button next__button" id="next-button">
+              siguienet
+            </button>
+            
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
